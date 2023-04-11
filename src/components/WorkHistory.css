@@ -1,0 +1,139 @@
+.work-history-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #e5e5e5;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.work-experience {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 50px 0;
+  position: relative;
+}
+
+.work-experience:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.work-date {
+  font-weight: bold;
+  color: #777777;
+  width: 150px;
+  padding-right: 30px;
+  text-align: right;
+}
+
+.work-details {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  position: relative;
+}
+
+.company-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.company-description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.company-description p:first-child {
+  margin-top: 0;
+}
+
+.company-description p:last-child {
+  margin-bottom: 0;
+}
+
+.company-description a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.company-description a:hover {
+  text-decoration: underline;
+}
+
+.work-experience:before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #e5e5e5;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+
+.work-experience:nth-child(odd)::before {
+  right: -15px;
+}
+
+.work-experience:nth-child(even)::before {
+  left: -15px;
+}
+
+.work-experience:last-child::before {
+  content: none;
+}
+
+@media screen and (max-width: 767px) {
+  .work-experience {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work-date {
+    text-align: center;
+    width: auto;
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .work-experience:nth-child(odd) {
+    flex-direction: column-reverse;
+  }
+
+  .work-details {
+    text-align: center;
+  }
+
+  .work-experience:before {
+    top: 50%;
+    transform: translateY(-50%);
+    left: -25px;
+    right: auto;
+  }
+
+  .work-experience:nth-child(odd)::before {
+    left: auto;
+    right: -25px;
+  }
+}
