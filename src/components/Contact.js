@@ -1,40 +1,42 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import './Contact.css';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-const Contact = () => {
+function Contact() {
   return (
-    <div className="contact-container">
-      <h2>Contact Me</h2>
-      <div className="contact-info">
-        <a href="mailto:davidbujosa@gmail.com">
-          <FontAwesomeIcon
-            icon={faEnvelope}
-            size="3x"
-            className="contact-icon"
-          />
-          <p>davidbujosa@gmail.com</p>
-        </a>
-        <a href="https://github.com/bujosa" target="_blank" rel="noreferrer">
-          <FontAwesomeIcon icon={faGithub} size="3x" className="contact-icon" />
-          <p>bujosa</p>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/davidbujosa/"
-          target="_blank"
-          rel="noreferrer">
-          <FontAwesomeIcon
-            icon={faLinkedin}
-            size="3x"
-            className="contact-icon"
-          />
-          <p>David Bujosa</p>
-        </a>
+    <footer className="bg-light py-5">
+      <div className="container px-4 px-lg-5">
+        <div className="row gx-4 gx-lg-5 justify-content-center">
+          <div className="col-lg-8 col-xl-6 text-center">
+            <h2 className="mt-0 text-black">Get in touch</h2>
+            <hr className="divider" />
+            <p className="text-muted mb-5">
+              Ready to start your next project with me? Send me an email and I
+              will get back to you as soon as possible!
+            </p>
+          </div>
+        </div>
+        <div className="social-media-icons mt-1">
+          <a
+            className="btn btn-dark btn-social mx-3"
+            href="mailto:davidbujosa@gmail.com">
+            <FontAwesomeIcon icon={faEnvelope} size="lg" />
+          </a>
+          <a
+            className="btn btn-dark btn-social mx-3"
+            href="https://github.com/bujosa">
+            <FontAwesomeIcon icon={faGithub} size="lg" />
+          </a>
+          <a
+            className="btn btn-dark btn-social mx-3"
+            href="https://www.linkedin.com/in/davidbujosa/">
+            <FontAwesomeIcon icon={faLinkedin} size="lg" />
+          </a>
+        </div>
       </div>
-    </div>
+    </footer>
   );
-};
+}
 
 export default Contact;
