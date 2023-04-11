@@ -1,0 +1,111 @@
+/* Estilo general */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: 2rem;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-right: 1rem;
+}
+
+.nav-link.active {
+  font-weight: 700;
+}
+
+/* Tabs */
+.nav-tabs {
+  border-bottom: 2px solid #dee2e6;
+}
+
+.nav-tabs .nav-item {
+  margin-bottom: 0;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  color: #6c757d;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-right: 1rem;
+}
+
+.nav-tabs .nav-link.active {
+  border: none;
+  color: #343a40;
+  font-weight: 700;
+}
+
+.tab-content {
+  padding: 1rem;
+  border: 2px solid #dee2e6;
+  border-top: none;
+  border-radius: 0.25rem;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
