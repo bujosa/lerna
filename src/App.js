@@ -14,8 +14,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   appBar: {
-    color: '#333',
-    backgroundColor: 'white',
+    backgroundColor: '#333',
+    color: 'white',
   },
   toolBar: {
     justifyContent: 'space-between',
@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
   },
   contentContainer: {
     marginTop: '20px',
+    backgroundColor: '#222',
+    color: 'white',
+    padding: '20px',
   },
   socialIcons: {
     display: 'flex',
@@ -32,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
   socialIcon: {
     marginLeft: theme.spacing(1),
+    color: 'white',
   },
 }));
 
@@ -45,7 +49,7 @@ function App() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.appBar} color="inherit">
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar className={classes.toolBar}>
           <div className={classes.socialIcons}>
             <IconButton
