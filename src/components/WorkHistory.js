@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './WorkHistory.css';
 
 const WorkHistory = () => {
+  const [highlighted, setHighlighted] = useState(Array(2).fill(false));
+
+  const handleMouseEnter = (index) => {
+    const newHighlighted = [...highlighted];
+    newHighlighted[index] = true;
+    setHighlighted(newHighlighted);
+  };
+
+  const handleMouseLeave = (index) => {
+    const newHighlighted = [...highlighted];
+    newHighlighted[index] = false;
+    setHighlighted(newHighlighted);
+  };
+
   return (
     <div className="work-history-container">
       <h2 className="work-history-title">Timeline</h2>
       <div className="timeline">
-        <div className="work-experience">
+        <div
+          className={`work-experience ${highlighted[1] ? 'highlighted' : ''}`}
+          onMouseEnter={() => handleMouseEnter(1)}
+          onMouseLeave={() => handleMouseLeave(1)}>
           <div className="work-date">2023 - present</div>
           <div className="work-details">
             <h3 className="company-name">Karvi</h3>
@@ -21,7 +38,10 @@ const WorkHistory = () => {
             </div>
           </div>
         </div>
-        <div className="work-experience">
+        <div
+          className={`work-experience ${highlighted[0] ? 'highlighted' : ''}`}
+          onMouseEnter={() => handleMouseEnter(0)}
+          onMouseLeave={() => handleMouseLeave(0)}>
           <div className="work-date">2020 - 2023</div>
           <div className="work-details">
             <h3 className="company-name">Curbo Technologies</h3>

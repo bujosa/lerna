@@ -30,6 +30,17 @@
   align-items: flex-start;
   margin: 50px 0;
   position: relative;
+  transition: all 0.3s ease;
+}
+
+.work-experience.active {
+  background-color: #555555;
+  box-shadow: 0 0 5px #00ff00;
+}
+
+.work-experience:hover {
+  background-color: #555555;
+  box-shadow: 0 0 5px #00ff00;
 }
 
 .work-experience:nth-child(odd) {
