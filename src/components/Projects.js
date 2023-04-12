@@ -1,88 +1,66 @@
 import React from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
-import classnames from 'classnames';
+import { makeStyles } from '@material-ui/core/styles';
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  Chip,
+  Grid,
+} from '@material-ui/core';
+import projectData from './data/projects';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    margin: theme.spacing(2),
+  },
+  media: {
+    height: 140,
+  },
+}));
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = React.useState('1');
-
-  const toggle = (tab) => {
-    if (activeTab !== tab) setActiveTab(tab);
-  };
+  const classes = useStyles();
 
   return (
-    <div>
-      <Nav tabs>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '1' })}
-            onClick={() => {
-              toggle('1');
-            }}>
-            Backend
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '2' })}
-            onClick={() => {
-              toggle('2');
-            }}>
-            Mobile
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '3' })}
-            onClick={() => {
-              toggle('3');
-            }}>
-            Solidity
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '4' })}
-            onClick={() => {
-              toggle('4');
-            }}>
-            Otros
-          </NavLink>
-        </NavItem>
-      </Nav>
-      <TabContent activeTab={activeTab}>
-        <TabPane tabId="1">
-          <h4>Proyectos Backend</h4>
-          <ul>
-            <li>Proyecto 1</li>
-            <li>Proyecto 2</li>
-            <li>Proyecto 3</li>
-          </ul>
-        </TabPane>
-        <TabPane tabId="2">
-          <h4>Proyectos Mobile</h4>
-          <ul>
-            <li>Proyecto 1</li>
-            <li>Proyecto 2</li>
-            <li>Proyecto 3</li>
-          </ul>
-        </TabPane>
-        <TabPane tabId="3">
-          <h4>Proyectos Solidity</h4>
-          <ul>
-            <li>Proyecto 1</li>
-            <li>Proyecto 2</li>
-            <li>Proyecto 3</li>
-          </ul>
-        </TabPane>
-        <TabPane tabId="4">
-          <h4>Otros Proyectos</h4>
-          <ul>
-            <li>Proyecto 1</li>
-            <li>Proyecto 2</li>
-            <li>Proyecto 3</li>
-          </ul>
-        </TabPane>
-      </TabContent>
+    <div className={classes.root}>
+      <Grid container spacing={2}>
+        {projectData.map((project) => (
+          <Grid item xs={12} sm={6} md={4} key={project.id}>
+            <Card>
+              <CardMedia
+                className={classes.media}
+                image={project.image}
+                title={project.title}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {project.title}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {project.description}
+                </Typography>
+                <br />
+                <div>
+                  {project.tags.map((tag, index) => (
+                    <Chip
+                      key={index}
+                      size="small"
+                      label={tag}
+                      style={{ marginRight: 5, marginBottom: 5 }}
+                    />
+                  ))}
+                </div>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  <strong>Category: </strong>
+                  {project.category}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 };
