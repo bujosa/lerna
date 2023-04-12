@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(3),
   },
   contentContainer: {
-    marginTop: '64px',
+    marginTop: '20px',
   },
 }));
 

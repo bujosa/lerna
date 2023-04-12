@@ -48,7 +48,11 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.spacing(0.5),
   },
   github: {
-    marginLeft: 'auto',
+    marginLeft: theme.spacing(1),
+  },
+  pageTitle: {
+    marginBottom: theme.spacing(4),
+    fontWeight: 'bold',
   },
 }));
 
@@ -57,11 +61,22 @@ const Projects = () => {
 
   return (
     <div className={classes.root}>
-      <Grid container justify="center" alignItems="center">
+      <Grid container justifyContent="center" alignItems="center">
         {projectsData.map((project) => (
           <Grid item key={project.id}>
             <Card className={classes.card}>
-              <CardHeader title={project.title} subheader={project.category} />
+              <CardHeader
+                title={project.title}
+                subheader={project.category}
+                action={
+                  <IconButton
+                    aria-label="github"
+                    className={classes.github}
+                    onClick={() => window.open(project.github)}>
+                    <GitHubIcon />
+                  </IconButton>
+                }
+              />
               <CardMedia
                 className={classes.media}
                 image={project.image}
@@ -82,12 +97,6 @@ const Projects = () => {
                   ))}
                 </div>
               </CardContent>
-              <IconButton
-                aria-label="github"
-                className={classes.github}
-                onClick={() => window.open(project.github)}>
-                <GitHubIcon />
-              </IconButton>
             </Card>
           </Grid>
         ))}

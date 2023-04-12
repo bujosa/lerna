@@ -4,7 +4,7 @@ import './WorkHistory.css';
 const WorkHistory = () => {
   return (
     <div className="work-history-container">
-      <h2 className="work-history-title">Work History</h2>
+      <h2 className="work-history-title">Timeline</h2>
       <div className="timeline">
         <div className="work-experience">
           <div className="work-date">2023 - present</div>

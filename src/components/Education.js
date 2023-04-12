@@ -35,11 +35,6 @@ const Education = () => {
   const classes = useStyles();
   return (
     <Container>
-      <center>
-        <Typography variant="h3" className={classes.educationTitle}>
-          Education
-        </Typography>
-      </center>
       <Row>
         <Col sm="6">
           <Card>
