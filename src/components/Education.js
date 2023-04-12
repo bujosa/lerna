@@ -19,15 +19,18 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2rem',
     fontWeight: 'bold',
     marginBottom: '2rem',
+    color: 'white', // nuevo estilo para el color del texto
   },
   certificationTitle: {
     fontSize: '1.5rem',
     fontWeight: 'bold',
     marginBottom: '1rem',
+    color: 'white', // nuevo estilo para el color del texto
   },
   certificationItem: {
     fontSize: '1.1rem',
     marginBottom: '0.5rem',
+    color: 'white', // nuevo estilo para el color del texto
   },
 }));
 
@@ -37,37 +40,47 @@ const Education = () => {
     <Container>
       <Row>
         <Col sm="6">
-          <Card>
-            <CardHeader>Master's Degree</CardHeader>
+          <Card className="bg-secondary">
+            <CardHeader className="text-white">Master's Degree</CardHeader>
             <CardBody>
-              <CardTitle tag="h5">
+              <CardTitle tag="h5" className="text-white">
                 Software Engineer: Cloud, data and Technologies management
               </CardTitle>
-              <CardText>
+              <CardText className="text-white">
                 University of Sevilla, Spain (US)
                 <br />
                 Sevilla, Spain
               </CardText>
               <ListGroup>
-                <ListGroupItem>Graduation Date: June 2022</ListGroupItem>
-                <ListGroupItem>GPA: 3.6/4.0</ListGroupItem>
+                <ListGroupItem className="text-black">
+                  Graduation Date: June 2022
+                </ListGroupItem>
+                <ListGroupItem className="text-black">
+                  GPA: 3.6/4.0
+                </ListGroupItem>
               </ListGroup>
             </CardBody>
           </Card>
         </Col>
         <Col sm="6">
-          <Card>
-            <CardHeader>Bachelor's Degree</CardHeader>
+          <Card className="bg-secondary">
+            <CardHeader className="text-white">Bachelor's Degree</CardHeader>
             <CardBody>
-              <CardTitle tag="h5">Software Engineer</CardTitle>
-              <CardText>
+              <CardTitle tag="h5" className="text-white">
+                Software Engineer
+              </CardTitle>
+              <CardText className="text-white">
                 Instituto Tecnológico de Santo Domingo (INTEC)
                 <br />
                 Santo Domingo, RD
               </CardText>
               <ListGroup>
-                <ListGroupItem>Graduation Date: April 2021</ListGroupItem>
-                <ListGroupItem>GPA: 3.8/4.0</ListGroupItem>
+                <ListGroupItem className="text-black">
+                  Graduation Date: April 2021
+                </ListGroupItem>
+                <ListGroupItem className="text-black">
+                  GPA: 3.8/4.0
+                </ListGroupItem>
               </ListGroup>
             </CardBody>
           </Card>
