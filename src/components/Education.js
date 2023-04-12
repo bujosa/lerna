@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Container,
   Row,
   Col,
   Card,
@@ -10,11 +11,35 @@ import {
   ListGroup,
   ListGroupItem,
 } from 'reactstrap';
+import { makeStyles } from '@material-ui/core/styles';
+import { Typography } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({
+  educationTitle: {
+    fontSize: '2rem',
+    fontWeight: 'bold',
+    marginBottom: '2rem',
+  },
+  certificationTitle: {
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
+    marginBottom: '1rem',
+  },
+  certificationItem: {
+    fontSize: '1.1rem',
+    marginBottom: '0.5rem',
+  },
+}));
 
 const Education = () => {
+  const classes = useStyles();
   return (
-    <div>
-      <h3>Education</h3>
+    <Container>
+      <center>
+        <Typography variant="h3" className={classes.educationTitle}>
+          Education
+        </Typography>
+      </center>
       <Row>
         <Col sm="6">
           <Card>
@@ -54,13 +79,21 @@ const Education = () => {
         </Col>
       </Row>
       <br />
-      <h5>Certifications</h5>
+      <Typography variant="h5" className={classes.certificationTitle}>
+        Certifications
+      </Typography>
       <ul>
-        <li>NestJS Certified - Oficial Course</li>
-        <li>Ethereum Dev. Bootcamp - Alchemy University</li>
-        <li>Google's Go (golang) Programming Language - Tood McLeod </li>
+        <Typography variant="body1" className={classes.certificationItem}>
+          <li>NestJS Certified - Oficial Course</li>
+        </Typography>
+        <Typography variant="body1" className={classes.certificationItem}>
+          <li>Ethereum Dev. Bootcamp - Alchemy University</li>
+        </Typography>
+        <Typography variant="body1" className={classes.certificationItem}>
+          <li>Google's Go (golang) Programming Language - Tood McLeod</li>
+        </Typography>
       </ul>
-    </div>
+    </Container>
   );
 };
 
