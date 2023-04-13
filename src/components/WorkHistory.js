@@ -18,7 +18,6 @@ const WorkHistory = () => {
 
   return (
     <div className="work-history-container">
-      <h2 className="work-history-title">Timeline</h2>
       <div className="timeline">
         <div
           className={`work-experience ${highlighted[1] ? 'highlighted' : ''}`}

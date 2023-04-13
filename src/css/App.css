@@ -4,8 +4,8 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #1f1f1f; /* color de fondo oscuro */
-  color: #fff; /* color de letra blanco */
+  background-color: #000000;
+  color: #fff;
 }
 
 h4 {
@@ -25,19 +25,6 @@ h4 {
   padding: 20px;
 }
 
-/* Footer */
 footer {
-  background-color: #343a40;
-  color: #fff;
-  padding: 2rem 0;
   text-align: center;
-}
-
-footer p {
-  margin: 0;
-}
-
-footer a {
-  color: #fff;
-  text-decoration: underline;
 }
