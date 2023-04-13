@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   appBar: {
-    backgroundColor: '#333',
+    backgroundColor: '#111',
     color: 'white',
   },
   toolBar: {
@@ -25,8 +25,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(3),
   },
   contentContainer: {
-    marginTop: '20px',
-    backgroundColor: '#222',
+    backgroundColor: '#000000',
     color: 'white',
     padding: '20px',
   },
@@ -74,7 +73,7 @@ function App() {
             onChange={handleChange}
             aria-label="Navigation Tabs">
             <Tab label="About Me" />
-            <Tab label="Work History" />
+            <Tab label="Experience" />
             <Tab label="Projects" />
             <Tab label="Education" />
           </Tabs>
