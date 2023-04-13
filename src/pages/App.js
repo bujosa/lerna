@@ -6,7 +6,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Contact from '../components/Contact';
 import Projects from '../components/Projects';
-import WorkHistory from '../components/WorkHistory';
+import Experience from '../components/Experience';
 import Education from '../components/Education';
 import Me from '../components/Me';
 
@@ -81,7 +81,7 @@ function App() {
       </AppBar>
       <div className={classes.contentContainer}>
         {value === 0 && <Me />}
-        {value === 1 && <WorkHistory />}
+        {value === 1 && <Experience />}
         {value === 2 && <Projects />}
         {value === 3 && <Education />}
       </div>

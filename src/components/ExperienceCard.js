@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const WorkHistoryCard = ({
+const ExperienceCard = ({
   company,
   date,
   description,
@@ -90,4 +90,4 @@ const WorkHistoryCard = ({
   );
 };
 
-export default WorkHistoryCard;
+export default ExperienceCard;

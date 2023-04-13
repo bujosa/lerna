@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Paper } from '@material-ui/core';
-import WorkHistoryCard from './WorkHistoryCard';
+import ExperienceCard from './ExperienceCard';
 import jobData from '../assets/data/jobs';
 
 const useStyles = makeStyles((theme) => ({
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const WorkHistory = () => {
+const Experience = () => {
   const classes = useStyles();
   const [highlighted, setHighlighted] = useState(Array(2).fill(false));
 
@@ -41,7 +41,7 @@ const WorkHistory = () => {
         {jobData.map((job) => (
           <Grid key={job.id} item xs={12} sm={12} md={12}>
             <Paper elevation={3} className={classes.paper}>
-              <WorkHistoryCard
+              <ExperienceCard
                 company={job.company}
                 date={job.date}
                 description={
@@ -61,4 +61,4 @@ const WorkHistory = () => {
   );
 };
 
-export default WorkHistory;
+export default Experience;
