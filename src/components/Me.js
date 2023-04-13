@@ -2,6 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Button, Box } from '@material-ui/core';
 import { Computer as ComputerIcon } from '@material-ui/icons';
 import GetAppIcon from '@material-ui/icons/GetApp';
+import resume from '../data/resume.pdf';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -60,7 +61,7 @@ const Me = () => {
         variant="contained"
         className={classes.button}
         startIcon={<GetAppIcon />}
-        href="../cv/resume.pdf"
+        href={resume}
         download>
         Download My Resume
       </Button>
