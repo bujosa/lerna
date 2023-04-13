@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Projects from './components/Projects';
 import WorkHistory from './components/WorkHistory';
 import Education from './components/Education';
+import Me from './components/Me';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -72,6 +73,7 @@ function App() {
             value={value}
             onChange={handleChange}
             aria-label="Navigation Tabs">
+            <Tab label="About Me" />
             <Tab label="Work History" />
             <Tab label="Projects" />
             <Tab label="Education" />
@@ -79,11 +81,12 @@ function App() {
         </Toolbar>
       </AppBar>
       <div className={classes.contentContainer}>
-        {value === 0 && <WorkHistory />}
-        {value === 1 && <Projects />}
-        {value === 2 && <Education />}
-        <Contact />
+        {value === 0 && <Me />}
+        {value === 1 && <WorkHistory />}
+        {value === 2 && <Projects />}
+        {value === 3 && <Education />}
       </div>
+      <Contact />
     </div>
   );
 }
