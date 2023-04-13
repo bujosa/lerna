@@ -1,7 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import {
+  faGithub,
+  faLinkedin,
+  faPaypal,
+} from '@fortawesome/free-brands-svg-icons';
 
 function Contact() {
   return (
@@ -32,6 +36,16 @@ function Contact() {
             className="btn btn-light btn-social mx-3"
             href="https://www.linkedin.com/in/davidbujosa/">
             <FontAwesomeIcon icon={faLinkedin} size="lg" />
+          </a>
+          <a
+            className="btn btn-light btn-social mx-3"
+            href="tel:1-829-266-6009">
+            <FontAwesomeIcon icon={faPhone} size="lg" />
+          </a>
+          <a
+            className="btn btn-light btn-social mx-3"
+            href="https://www.paypal.com/paypalme/davidbujosa">
+            <FontAwesomeIcon icon={faPaypal} size="lg" />
           </a>
         </div>
       </div>
