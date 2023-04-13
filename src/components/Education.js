@@ -13,6 +13,8 @@ import {
 } from 'reactstrap';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
+import intec from '../assets/images/intec.png';
+import us from '../assets/images/us.png';
 
 const useStyles = makeStyles((theme) => ({
   educationTitle: {
@@ -39,79 +41,96 @@ const useStyles = makeStyles((theme) => ({
 
 const Education = () => {
   const classes = useStyles();
+
+  const masterDegree = {
+    header: "Master's Degree",
+    title: 'Software Engineer: Cloud, Data and Technologies Management',
+    university: 'University of Sevilla',
+    location: 'Sevilla, Spain',
+    date: 'June 2022',
+    gpa: '3.6/4.0',
+    logo: us,
+  };
+
+  const bachelorDegree = {
+    header: "Bachelor's Degree",
+    title: 'Software Engineer',
+    university: 'Instituto Tecnológico de Santo Domingo (INTEC)',
+    location: 'Santo Domingo, RD',
+    date: 'April 2021',
+    gpa: '3.8/4.0',
+    logo: intec,
+  };
+
+  const certifications = [
+    'NestJS Certified - Official Course',
+    'Ethereum Dev. Bootcamp - Alchemy University',
+    "Google's Go (golang) Programming Language - Todd McLeod",
+  ];
+
+  const renderEducationCard = (degree) => {
+    return (
+      <Card className="h-100">
+        <CardHeader className="bg-dark text-white">{degree.header}</CardHeader>
+        <CardBody className="bg-secondary">
+          <div className="d-flex justify-content-between align-items-center mb-3">
+            <CardTitle tag="h5" className="text-white">
+              {degree.title}
+            </CardTitle>
+            <img
+              src={degree.logo}
+              alt={degree.university}
+              width={100}
+              height={100}
+            />
+          </div>
+          <CardText className={classes.cardText}>
+            {degree.university}
+            <br />
+            {degree.location}
+          </CardText>
+          <ListGroup>
+            <ListGroupItem className={classes.listGroupItem}>
+              <span className="text-black">Graduation Date: {degree.date}</span>
+            </ListGroupItem>
+            <ListGroupItem className={classes.listGroupItem}>
+              <span className="text-black">GPA: {degree.gpa}</span>
+            </ListGroupItem>
+          </ListGroup>
+        </CardBody>
+      </Card>
+    );
+  };
+
+  const renderCertifications = () => {
+    return (
+      <div className="d-flex flex-column align-items-left">
+        <Typography variant="h5" className={classes.certificationTitle}>
+          Certifications
+        </Typography>
+        <ul>
+          {certifications.map((certification) => (
+            <Typography variant="body1" className={classes.certificationItem}>
+              <li>{certification}</li>
+            </Typography>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+
   return (
     <Container>
       <Row>
         <Col sm="6" className="mb-4">
-          <Card className="h-100">
-            <CardHeader className="bg-dark text-white">
-              Master's Degree
-            </CardHeader>
-            <CardBody className="bg-secondary">
-              <CardTitle tag="h5" className="text-white">
-                Software Engineer: Cloud, data and Technologies management
-              </CardTitle>
-              <CardText className={classes.cardText}>
-                University of Sevilla, Spain (US)
-                <br />
-                Sevilla, Spain
-              </CardText>
-              <ListGroup>
-                <ListGroupItem className={classes.listGroupItem}>
-                  <span className="text-black">
-                    Graduation Date: June 2022{' '}
-                  </span>
-                </ListGroupItem>
-                <ListGroupItem className={classes.listGroupItem}>
-                  <span className="text-black"> GPA: 3.6/4.0 </span>
-                </ListGroupItem>
-              </ListGroup>
-            </CardBody>
-          </Card>
+          {renderEducationCard(masterDegree)}
         </Col>
         <Col sm="6" className="mb-4">
-          <Card className="h-100">
-            <CardHeader className="bg-dark text-white">
-              Bachelor's Degree
-            </CardHeader>
-            <CardBody className="bg-secondary">
-              <CardTitle tag="h5" className="text-white">
-                Software Engineer
-              </CardTitle>
-              <CardText className={classes.cardText}>
-                Instituto Tecnológico de Santo Domingo (INTEC)
-                <br />
-                Santo Domingo, RD
-              </CardText>
-              <ListGroup>
-                <ListGroupItem className={classes.listGroupItem}>
-                  <span className="text-black">
-                    Graduation Date: April 2021{' '}
-                  </span>
-                </ListGroupItem>
-                <ListGroupItem className={classes.listGroupItem}>
-                  <span className="text-black"> GPA: 3.8/4.0 </span>
-                </ListGroupItem>
-              </ListGroup>
-            </CardBody>
-          </Card>
+          {renderEducationCard(bachelorDegree)}
         </Col>
       </Row>
       <br />
-      <Typography variant="h5" className={classes.certificationTitle}>
-        Certifications
-      </Typography>
-      <ul>
-        <Typography variant="body1" className={classes.certificationItem}>
-          <li>NestJS Certified - Oficial Course</li>
-        </Typography>
-        <Typography variant="body1" className={classes.certificationItem}>
-          <li>Ethereum Dev. Bootcamp - Alchemy University</li>
-        </Typography>
-        <Typography variant="body1" className={classes.certificationItem}>
-          <li>Google's Go (golang) Programming Language - Tood McLeod</li>
-        </Typography>
-      </ul>
+      {renderCertifications()}
     </Container>
   );
 };
