@@ -1,6 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Button, Box } from '@material-ui/core';
-import { Computer as ComputerIcon } from '@material-ui/icons';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import resume from '../data/resume.pdf';
 import blackhole from '../data/blackhole.gif';
