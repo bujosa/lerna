@@ -11,7 +11,7 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
-import projectsData from '../data/projects';
+import projectsData from '../assets/data/projects';
 
 const useStyles = makeStyles((theme) => ({
   root: {

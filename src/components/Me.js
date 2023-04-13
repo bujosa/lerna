@@ -1,8 +1,8 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Button, Box } from '@material-ui/core';
 import GetAppIcon from '@material-ui/icons/GetApp';
-import resume from '../data/resume.pdf';
-import blackhole from '../data/blackhole.gif';
+import resume from '../assets/files/resume.pdf';
+import blackhole from '../assets/images/blackhole.gif';
 
 const useStyles = makeStyles((theme) => ({
   root: {

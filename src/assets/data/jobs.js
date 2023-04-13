@@ -1,5 +1,5 @@
-import karvi from './karvi.png';
-import curbo from './curbo.png';
+import karvi from '../images/karvi.png';
+import curbo from '../images/curbo.png';
 
 const jobData = [
   {
