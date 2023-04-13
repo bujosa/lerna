@@ -13,7 +13,6 @@ function Contact() {
       <div className="container px-4 px-lg-5">
         <div className="row gx-4 gx-lg-5 justify-content-center">
           <div className="col-lg-8 col-xl-6 text-center">
-            <h2 className="mt-0 text-light">Get In Touch</h2>
             <hr className="divider" />
             <p className="text-muted mb-5 text-light">
               Ready to start your next project with me? <br></br>Send me an
