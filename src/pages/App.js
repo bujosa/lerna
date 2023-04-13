@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import './css/App.css';
+import '../css/App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar, Tab, Tabs, IconButton } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import Contact from './components/Contact';
-import Projects from './components/Projects';
-import WorkHistory from './components/WorkHistory';
-import Education from './components/Education';
-import Me from './components/Me';
+import Contact from '../components/Contact';
+import Projects from '../components/Projects';
+import WorkHistory from '../components/WorkHistory';
+import Education from '../components/Education';
+import Me from '../components/Me';
 
 const useStyles = makeStyles((theme) => ({
   root: {

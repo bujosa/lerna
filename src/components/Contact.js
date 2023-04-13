@@ -21,33 +21,35 @@ function Contact() {
             </p>
           </div>
         </div>
-        <div className="social-media-icons mt-1">
-          <a
-            className="btn btn-light btn-social mx-3"
-            href="mailto:davidbujosa@gmail.com">
-            <FontAwesomeIcon icon={faEnvelope} size="lg" />
-          </a>
-          <a
-            className="btn btn-light btn-social mx-3"
-            href="https://github.com/bujosa">
-            <FontAwesomeIcon icon={faGithub} size="lg" />
-          </a>
-          <a
-            className="btn btn-light btn-social mx-3"
-            href="https://www.linkedin.com/in/davidbujosa/">
-            <FontAwesomeIcon icon={faLinkedin} size="lg" />
-          </a>
-          <a
-            className="btn btn-light btn-social mx-3"
-            href="tel:1-829-266-6009">
-            <FontAwesomeIcon icon={faPhone} size="lg" />
-          </a>
-          <a
-            className="btn btn-light btn-social mx-3"
-            href="https://www.paypal.com/paypalme/davidbujosa">
-            <FontAwesomeIcon icon={faPaypal} size="lg" />
-          </a>
-        </div>
+        <center>
+          <div className="social-media-icons mt-1">
+            <a
+              className="btn btn-light btn-social mx-3"
+              href="mailto:davidbujosa@gmail.com">
+              <FontAwesomeIcon icon={faEnvelope} size="lg" />
+            </a>
+            <a
+              className="btn btn-light btn-social mx-3"
+              href="https://github.com/bujosa">
+              <FontAwesomeIcon icon={faGithub} size="lg" />
+            </a>
+            <a
+              className="btn btn-light btn-social mx-3"
+              href="https://www.linkedin.com/in/davidbujosa/">
+              <FontAwesomeIcon icon={faLinkedin} size="lg" />
+            </a>
+            <a
+              className="btn btn-light btn-social mx-3"
+              href="tel:1-829-266-6009">
+              <FontAwesomeIcon icon={faPhone} size="lg" />
+            </a>
+            <a
+              className="btn btn-light btn-social mx-3"
+              href="https://www.paypal.com/paypalme/davidbujosa">
+              <FontAwesomeIcon icon={faPaypal} size="lg" />
+            </a>
+          </div>
+        </center>
       </div>
     </footer>
   );
