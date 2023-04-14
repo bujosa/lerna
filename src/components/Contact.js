@@ -9,7 +9,7 @@ import {
 
 function Contact() {
   return (
-    <footer className="bg-dark py-5">
+    <footer className="bg-dark py-4">
       <div className="container px-4 px-lg-5">
         <div className="row gx-4 gx-lg-5 justify-content-center">
           <div className="col-lg-8 col-xl-6 text-center">
