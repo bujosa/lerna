@@ -9,7 +9,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
     padding: theme.spacing(3),
     background: `url(${blackhole})`,
     backgroundRepeat: 'no-repeat',
@@ -23,22 +22,21 @@ const useStyles = makeStyles((theme) => ({
   button: {
     marginTop: theme.spacing(2),
     backgroundColor: theme.palette.secondary.main,
-    color: theme.palette.secondary.contrastText,
+    color: '#ffffff',
     '&:hover': {
-      backgroundColor: theme.palette.secondary.dark,
+      backgroundColor: '#ffffff',
+      color: theme.palette.secondary.main,
     },
   },
   title: {
     marginBottom: theme.spacing(2),
     fontWeight: 'bold',
+    fontSize: 60,
     color: theme.palette.secondary.contrastText,
   },
   subtitle: {
     marginBottom: theme.spacing(2),
     fontStyle: 'italic',
-    color: theme.palette.secondary.contrastText,
-  },
-  body: {
     color: theme.palette.secondary.contrastText,
   },
 }));
@@ -48,11 +46,7 @@ const Me = () => {
 
   return (
     <Box className={classes.root}>
-      <Typography
-        variant="h1"
-        component="h1"
-        align="center"
-        className={classes.title}>
+      <Typography align="center" className={classes.title}>
         {'</>'} Software Engineer
       </Typography>
       <Typography variant="h5" align="center" className={classes.subtitle}>
