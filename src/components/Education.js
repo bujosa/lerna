@@ -15,6 +15,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 import intec from '../assets/images/intec.png';
 import us from '../assets/images/us.png';
+import blackhole from '../assets/images/blackhole.gif';
 
 const useStyles = makeStyles((theme) => ({
   educationTitle: {
@@ -36,6 +37,12 @@ const useStyles = makeStyles((theme) => ({
   },
   listGroupItem: {
     color: '#ffffff',
+  },
+  root: {
+    marginTop: '1rem',
+    background: `url(${blackhole})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'contain',
   },
 }));
 
@@ -120,7 +127,7 @@ const Education = () => {
   };
 
   return (
-    <Container>
+    <Container className={classes.root}>
       <Row>
         <Col sm="6" className="mb-4">
           {renderEducationCard(masterDegree)}
