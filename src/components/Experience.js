@@ -51,6 +51,7 @@ const Experience = () => {
                   <span className={classes.description}>{job.description}</span>
                 }
                 details={job.details}
+                url={job.url}
                 image={job.image}
                 highlighted={highlighted[job.id - 1]}
                 onMouseEnter={() => handleMouseEnter(job.id - 1)}
