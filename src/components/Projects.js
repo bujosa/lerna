@@ -10,13 +10,16 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
-
 import projectsData from '../assets/data/projects';
+import space from '../assets/images/moon.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     padding: theme.spacing(4),
+    background: `url(${space})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
   },
   card: {
     maxWidth: 345,

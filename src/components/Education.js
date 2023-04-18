@@ -15,7 +15,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 import intec from '../assets/images/intec.png';
 import us from '../assets/images/us.png';
-import blackhole from '../assets/images/blackhole.gif';
+import blackhole from '../assets/images/night_space.jpg';
 
 const useStyles = makeStyles((theme) => ({
   educationTitle: {
@@ -43,6 +43,10 @@ const useStyles = makeStyles((theme) => ({
     background: `url(${blackhole})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'contain',
+  },
+  cardBody: {
+    padding: '1rem',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
 }));
 
@@ -79,7 +83,9 @@ const Education = () => {
     return (
       <Card className="h-100">
         <CardHeader className="bg-dark text-white">{degree.header}</CardHeader>
-        <CardBody className="bg-secondary">
+        <CardBody
+          className="bg-secondary"
+          style={{ backgroundColor: 'transparent' }}>
           <div className="d-flex justify-content-between align-items-center mb-3">
             <CardTitle tag="h5" className="text-white">
               {degree.title}

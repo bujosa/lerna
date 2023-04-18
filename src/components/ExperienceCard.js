@@ -10,11 +10,14 @@ import {
 const useStyles = makeStyles((theme) => ({
   card: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
+    justifyContent: 'center',
     alignItems: 'center',
     margin: theme.spacing(2),
     padding: theme.spacing(2),
-    backgroundColor: '#000000',
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     boxShadow: '0px 4px 8px rgba(255, 255, 255, 0.05)',
     transition: 'transform .2s',
     '&:hover': {
@@ -23,17 +26,18 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cardContent: {
-    marginLeft: theme.spacing(2),
-    color: '#000000',
+    marginTop: theme.spacing(2),
+    color: '#ffffff',
+    textAlign: 'center',
+    height: '200px',
   },
   cardMedia: {
-    minWidth: 300,
-    objectFit: 'auto',
-    borderRadius: '10%',
-    height: 200,
-    width: 120,
+    objectFit: 'contain',
+    borderRadius: '50%',
+    maxHeight: 200,
+    maxWidth: '100%',
     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.3)',
-    marginRight: theme.spacing(2),
+    marginBottom: theme.spacing(2),
   },
   companyName: {
     fontWeight: 'bold',
@@ -71,7 +75,12 @@ const ExperienceCard = ({
       className={`${classes.card} ${highlighted ? 'highlighted' : ''}`}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}>
-      <CardMedia className={classes.cardMedia} image={image} title={company} />
+      <CardMedia
+        className={classes.cardMedia}
+        component="img"
+        image={image}
+        title={company}
+      />
       <CardContent className={classes.cardContent}>
         <Typography variant="h5" component="h3" className={classes.companyName}>
           {company}

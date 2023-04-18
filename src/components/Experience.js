@@ -3,14 +3,17 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Paper } from '@material-ui/core';
 import ExperienceCard from './ExperienceCard';
 import jobData from '../assets/data/jobs';
+import space from '../assets/images/blue_space.jpg';
 
 const useStyles = makeStyles((theme) => ({
   workHistoryContainer: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(4),
+    background: `url(${space})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
   },
   paper: {
-    backgroundColor: '#000000',
-    color: '#FFFFFF',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     boxShadow: '0px 2px 4px #E7C84B',
   },
   description: {
@@ -39,8 +42,8 @@ const Experience = () => {
     <div className={classes.workHistoryContainer}>
       <Grid container spacing={2}>
         {jobData.map((job) => (
-          <Grid key={job.id} item xs={12} sm={12} md={12}>
-            <Paper elevation={3} className={classes.paper}>
+          <Grid key={job.id} item xs={12} sm={12} md={6}>
+            <Paper elevation={1} className={classes.paper}>
               <ExperienceCard
                 company={job.company}
                 date={job.date}

@@ -17,7 +17,7 @@ const jobData = [
     date: '2020 - 2023',
     description: 'A platform for buying and selling vehicles. (curbo.com)',
     details:
-      'Developed and maintained the backend of the platform using NestJS, MongoDB, and GCP. The architecture of the platform is microservice-based and is deployed on GCP. I also maintained and structure the database of the platform.',
+      'Developed and maintained the backend of the platform using NestJS, MongoDB, and GCP. The architecture of the platform is microservice-based and is deployed on GCP. I also maintained and structure the database of the platform. ',
     image: curbo,
   },
 ];
