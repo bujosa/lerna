@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Button, Box } from '@material-ui/core';
+import { Typography, Button, Box, Chip } from '@material-ui/core';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import resume from '../assets/files/resume.pdf';
 import blackhole from '../assets/images/blackhole.gif';
@@ -39,6 +39,14 @@ const useStyles = makeStyles((theme) => ({
     fontStyle: 'italic',
     color: theme.palette.secondary.contrastText,
   },
+  skills: {
+    marginTop: theme.spacing(2),
+    display: 'flex',
+    flexWrap: 'wrap',
+    '& > *': {
+      margin: theme.spacing(0.5),
+    },
+  },
 }));
 
 const Me = () => {
@@ -56,6 +64,22 @@ const Me = () => {
         I'm passionate about building software that helps people solve
         real-world problems.
       </Typography>
+      <Box className={classes.skills}>
+        <Chip label="MongoDB" />
+        <Chip label="AWS" />
+        <Chip label="GCP" />
+        <Chip label="Python" />
+        <Chip label="Node.js" />
+        <Chip label="TypeScript" />
+        <Chip label="React" />
+        <Chip label="Flutter" />
+        <Chip label="Docker" />
+        <Chip label="Kubernetes" />
+        <Chip label="Git" />
+        <Chip label="Rust" />
+        <Chip label="Solidity" />
+        <Chip label="Ethereum" />
+      </Box>
       <Button
         variant="contained"
         className={classes.button}
