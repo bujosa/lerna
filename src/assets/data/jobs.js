@@ -10,6 +10,7 @@ const jobData = [
     details:
       'Developed and maintained the backend of the platform using NestJS, MongoDB, and Python.',
     image: karvi,
+    url: 'https://www.karvi.com',
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const jobData = [
     details:
       'Developed and maintained the backend of the platform using NestJS, MongoDB, and GCP. The architecture of the platform is microservice-based and is deployed on GCP. I also maintained and structure the database of the platform. ',
     image: curbo,
+    url: 'https://www.curbo.com',
   },
 ];
 
