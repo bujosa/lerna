@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Button, Box, Chip } from '@material-ui/core';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import resume from '../assets/files/resume.pdf';
-import blackhole from '../assets/images/blackhole.gif';
+import space from '../assets/images/space.gif';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -10,9 +10,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     padding: theme.spacing(3),
-    background: `url(${blackhole})`,
+    background: `url(${space})`,
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'contain',
+    backgroundSize: 'cover',
   },
   icon: {
     fontSize: 72,
@@ -24,8 +24,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
     color: '#ffffff',
     '&:hover': {
-      backgroundColor: '#ffffff',
-      color: theme.palette.secondary.main,
+      backgroundColor: 'green',
+      color: 'white',
     },
   },
   title: {
@@ -40,11 +40,20 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.secondary.contrastText,
   },
   skills: {
-    marginTop: theme.spacing(2),
     display: 'flex',
+    justifyContent: 'center',
     flexWrap: 'wrap',
+    marginTop: theme.spacing(2),
     '& > *': {
       margin: theme.spacing(0.5),
+    },
+  },
+  chip: {
+    color: '#ffffff',
+    backgroundColor: theme.palette.secondary.main,
+    '&:hover': {
+      backgroundColor: 'green',
+      color: 'white',
     },
   },
 }));
@@ -64,22 +73,22 @@ const Me = () => {
         I'm passionate about building software that helps people solve
         real-world problems.
       </Typography>
-      <Box className={classes.skills}>
-        <Chip label="MongoDB" />
-        <Chip label="AWS" />
-        <Chip label="GCP" />
-        <Chip label="Python" />
-        <Chip label="Node.js" />
-        <Chip label="TypeScript" />
-        <Chip label="React" />
-        <Chip label="Flutter" />
-        <Chip label="Docker" />
-        <Chip label="Kubernetes" />
-        <Chip label="Git" />
-        <Chip label="Rust" />
-        <Chip label="Solidity" />
-        <Chip label="Ethereum" />
-      </Box>
+      <div className={classes.skills}>
+        <Chip label="MongoDB" className={classes.chip} />
+        <Chip label="AWS" className={classes.chip} />
+        <Chip label="GCP" className={classes.chip} />
+        <Chip label="Python" className={classes.chip} />
+        <Chip label="Node.js" className={classes.chip} />
+        <Chip label="TypeScript" className={classes.chip} />
+        <Chip label="React" className={classes.chip} />
+        <Chip label="Flutter" className={classes.chip} />
+        <Chip label="Docker" className={classes.chip} />
+        <Chip label="Kubernetes" className={classes.chip} />
+        <Chip label="Git" className={classes.chip} />
+        <Chip label="Rust" className={classes.chip} />
+        <Chip label="Solidity" className={classes.chip} />
+        <Chip label="Ethereum" className={classes.chip} />
+      </div>
       <Button
         variant="contained"
         className={classes.button}
