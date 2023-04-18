@@ -33,11 +33,10 @@ const useStyles = makeStyles((theme) => ({
   },
   cardMedia: {
     objectFit: 'contain',
-    borderRadius: '50%',
-    maxHeight: 200,
+    borderRadius: '20%',
+    maxHeight: '175px',
     maxWidth: '100%',
     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.3)',
-    marginBottom: theme.spacing(2),
   },
   companyName: {
     fontWeight: 'bold',
@@ -67,6 +66,7 @@ const ExperienceCard = ({
   highlighted,
   onMouseEnter,
   onMouseLeave,
+  url,
 }) => {
   const classes = useStyles();
 
@@ -75,12 +75,14 @@ const ExperienceCard = ({
       className={`${classes.card} ${highlighted ? 'highlighted' : ''}`}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}>
-      <CardMedia
-        className={classes.cardMedia}
-        component="img"
-        image={image}
-        title={company}
-      />
+      <a href={url}>
+        <CardMedia
+          className={classes.cardMedia}
+          component="img"
+          image={image}
+          title={company}
+        />
+      </a>
       <CardContent className={classes.cardContent}>
         <Typography variant="h5" component="h3" className={classes.companyName}>
           {company}
