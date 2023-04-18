@@ -13,9 +13,8 @@ import {
 } from 'reactstrap';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
-import intec from '../assets/images/intec.png';
-import us from '../assets/images/us.png';
 import blackhole from '../assets/images/night_space.jpg';
+import educationData from '../assets/data/education';
 
 const useStyles = makeStyles((theme) => ({
   educationTitle: {
@@ -53,31 +52,7 @@ const useStyles = makeStyles((theme) => ({
 const Education = () => {
   const classes = useStyles();
 
-  const masterDegree = {
-    header: "Master's Degree",
-    title: 'Software Engineer: Cloud, Data and Technologies Management',
-    university: 'University of Sevilla',
-    location: 'Sevilla, Spain',
-    date: 'June 2022',
-    gpa: '3.6/4.0',
-    logo: us,
-  };
-
-  const bachelorDegree = {
-    header: "Bachelor's Degree",
-    title: 'Software Engineer',
-    university: 'Instituto Tecnológico de Santo Domingo (INTEC)',
-    location: 'Santo Domingo, RD',
-    date: 'April 2021',
-    gpa: '3.8/4.0',
-    logo: intec,
-  };
-
-  const certifications = [
-    'NestJS Certified - Official Course',
-    'Ethereum Dev. Bootcamp - Alchemy University',
-    "Google's Go (golang) Programming Language - Todd McLeod",
-  ];
+  const { masterDegree, bachelorDegree, certifications } = educationData;
 
   const renderEducationCard = (degree) => {
     return (
