@@ -27,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
   contentContainer: {
     backgroundColor: '#000000',
     color: 'white',
-    padding: '20px',
   },
   socialIcons: {
     display: 'flex',
