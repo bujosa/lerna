@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/lerna/static/css/main.a9e83818.css",
+    "main.js": "/lerna/static/js/main.47254937.js",
+    "static/media/space.gif": "/lerna/static/media/space.b5b570ed963ade69d291.gif",
+    "static/media/night_space.jpg": "/lerna/static/media/night_space.e2775b96e15c6f0016ba.jpg",
+    "static/media/blue_space.jpg": "/lerna/static/media/blue_space.8ae19952e93a5a9f85b1.jpg",
+    "static/media/moon.jpg": "/lerna/static/media/moon.8ca132fed5fbd217e1f3.jpg",
+    "static/media/us.png": "/lerna/static/media/us.ad4136a7c7d6946126dd.png",
+    "static/media/resume.pdf": "/lerna/static/media/resume.742efff6fff11dad836c.pdf",
+    "static/media/intec.png": "/lerna/static/media/intec.d686887158180818d8e2.png",
+    "static/media/karvi.png": "/lerna/static/media/karvi.df6629c6e7009becf3df.png",
+    "static/media/curbo.png": "/lerna/static/media/curbo.43a1f0bea226c31d5e5b.png",
+    "index.html": "/lerna/index.html",
+    "main.a9e83818.css.map": "/lerna/static/css/main.a9e83818.css.map",
+    "main.47254937.js.map": "/lerna/static/js/main.47254937.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9e83818.css",
+    "static/js/main.47254937.js"
+  ]
+}
